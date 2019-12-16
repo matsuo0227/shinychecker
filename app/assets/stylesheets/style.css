@@ -1,0 +1,95 @@
+body {
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center;
+    margin: 0px
+}
+
+ul.checker-images li {
+    display: inline-block;
+}
+
+ul.checker-images li .image {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-style: solid;
+    border-width: 3px;
+    border-color: transparent;
+}
+
+ul.checker-images li .image.checked {
+    border-color: red;
+}
+
+.image img.thumbnail {
+    width: 100%;
+    height: 100%;
+}
+
+img.thumbnail:not(checked) {
+    filter: brightness(30%);
+}
+
+img.thumbnail.checked {
+    filter: initial;
+}
+
+img.thumbnail:hover {
+    filter: brightness(60%);
+}
+
+.image .possession-checkbox {
+    position: absolute;
+    background-size: 20px;
+    top: 6px;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    /* display: none; */
+}
+
+.image img.thumbnail.checked+.possession-checkbox {
+    display: block;
+}
+
+.possession-checkbox[data-checked=false] {
+    background-color: white;
+    background-image: none;
+}
+
+.possession-checkbox[data-checked=true] {
+    background-color: white;
+    background-image: url(check.png);
+}
+
+#content {
+    display: flex;
+}
+
+.card {
+    width: 600px;
+    height: 338px;
+}
+
+.thum-container {
+    width: 70%;
+}
+
+.info-table {
+    width: 600px;
+    top: 10px;
+    position: sticky;
+}
+
+table th {
+    width: 91px;
+    border-right: 3px solid #bbb;
+}
+
+table .idea.hidden {
+    display: none;
+}

@@ -1,0 +1,45 @@
+<%= javascript_include_tag 'event-handler' %>
+<div id="content">
+    <div class="thum-container">
+        <div class="group1">
+            <h1>プロデュース</h1>
+            <%= render partial: 'group2', locals: {type: 'SSR', kind: 'pSSR', id_thums: @pSSR_id_thums} %>
+            <%= render partial: 'group2', locals: {type: 'SR', kind: 'pSR', id_thums: @pSR_id_thums} %>
+            <%= render partial: 'group2', locals: {type: 'R', kind: 'pR', id_thums: @pR_id_thums} %>
+        </div>
+        <div class="group1">
+            <h1>サポート</h1>
+            <%= render partial: 'group2', locals: {type: 'SSR', kind: 'sSSR', id_thums: @sSSR_id_thums} %>
+            <%= render partial: 'group2', locals: {type: 'SR', kind: 'sSR', id_thums: @sSR_id_thums} %>
+            <%= render partial: 'group2', locals: {type: 'R', kind: 'sR', id_thums: @sR_id_thums} %>
+            <%= render partial: 'group2', locals: {type: 'N', kind: 'sN', id_thums: @sN_id_thums} %>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="info-table">
+            <img id="card" src="/assets/dummy.png"/>
+            <table>
+                <tr class="card_name">
+                    <th>カード名</th>
+                    <td id="card-name"></td>
+                </tr>
+                <tr class="idea">
+                    <th>アイデア</th>
+                    <td id="idea"></td>
+                </tr>
+                <tr class="unit">
+                    <th>ユニット</th>
+                    <td id="unit"></td>
+                </tr>
+                <tr class="obtain">
+                    <th>入手</th>
+                    <td id="obtain"></td>
+                </tr>
+                <tr class="implement">
+                    <th>追加日</th>
+                    <td id="implement"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="group2">
+  <h3><%= type %></h3>
+  <ul class="checker-images">
+    <% id_thums.each do |id_thum| %>
+      <li>
+        <div class="image">
+          <%= link_to cards_info_path(id: id_thum[:id]), remote: true do %>
+          <%= image_tag(id_thum[:thum], class: "thumbnail #{return_possession(id_thum[:id])[1]}") %>
+          <div id="<%= id_thum[:id] %>" class="possession-checkbox" data-kind="<%= kind %>" data-checked="<%= return_possession(id_thum[:id])[0] %>"></div>
+          <% end %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+</div>
